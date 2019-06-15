@@ -9,7 +9,6 @@ app.config.from_object(DevConfig)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-
 tags = db.Table(
     'post_tags',
     db.Column('post_id', db.Integer, db.ForeignKey('post.id')),

@@ -1,8 +1,13 @@
 class Config(object):
-    pass
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_ECHO = True
+
 
 class ProdConfig(Config):
     pass
 
+
 class DevConfig(Config):
-    DEBUB = True
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = "sqlite:///database.db"
+
